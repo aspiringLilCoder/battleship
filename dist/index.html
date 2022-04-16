@@ -12,30 +12,38 @@
     <link rel="stylesheet" href="../src\style.css">
 </head>
 <body>
-    <h1 id="title">Battle of the Seas</h1>
-    <div id="home">
-        <div id="setShipsGameboard"></div>
-        <div id="sideOptions">
-            <p id="instructionsDisplay">Place your Carrier...</p>
-            <button id="axis">Horizontal</button>
-            <button id="autoPlace">Auto Place</button>
-            <button id="resetBoard">Reset</button>
-        </div>
-    </div>
-    <div id="game">
-        <p id="turnDisplay">It's Your Turn To Strike</p> <!--Awaiting Opponent's Attack-->
-        <div id="gameBoards">
-            <div id="left">
-                <p id="myBoardTitle">Friendly Seas</p>
-                <div id="myBoard"></div>
-            </div>
-            <div id="right">
-                <p id="AIBoardTitle">Enemy's Seas</p>
-                <div id="AIBoard"></div>
+    <header id="title">Battle of the Seas</header>
+    <article>
+        <div id="home">
+            <div id="setShipsGameboard"></div>
+            <div id="sideOptions">
+                <p id="instructionsDisplay">Place your Carrier...</p>
+                <button id="axis">Horizontal</button>
+                <button id="autoPlace">Auto Place</button>
+                <button id="resetBoard">Reset</button>
             </div>
         </div>
-        <button id="restartGame">Restart</button>
-    </div>
+        <div id="game">
+            <p id="turnDisplay">It's Your Turn To Strike</p> <!--Awaiting Opponent's Attack-->
+            <div id="gameBoards">
+                <div id="left">
+                    <p id="myBoardTitle">Friendly Seas</p>
+                    <div id="myBoard"></div>
+                </div>
+                <div id="right">
+                    <p id="AIBoardTitle">Enemy's Seas</p>
+                    <div id="AIBoard"></div>
+                </div>
+            </div>
+            <button id="restartGame">Restart</button>
+        </div>
+    </article>
+    <footer>
+        <a target="_blank" id="github-link" href="https://github.com/aspiringLilCoder">
+        Created by aspiringLilCoder
+            <img src="../img/github-logo.png" alt="GitHub Logo" width="20" height="20" style="margin-left: 10px;">
+        </a>
+    </footer>
 </body>
 </html>
 
