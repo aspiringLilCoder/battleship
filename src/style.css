@@ -17,6 +17,13 @@ body {
           flex-direction: column;
 }
 
+button {
+  border-radius: 25px;
+  font-family: 'Fredoka', sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
 #title {
   text-align: center;
   margin: 20px;
@@ -38,7 +45,7 @@ body {
   width: 500px;
   height: 500px;
   margin-right: 100px;
-  border: 1px solid black;
+  border: 1px solid #4e4e4e;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[10];
@@ -48,7 +55,56 @@ body {
 }
 
 #home #setShipsGameboard .square {
-  border: 1px solid black;
+  border: 1px solid #4e4e4e;
+}
+
+#home #sideOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#home #sideOptions #instructionsDisplay {
+  color: #f0f8ff;
+  width: 250px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #4e4e4e;
+  border-radius: 25px;
+  font-size: 25px;
+  padding: 5px;
+  font-weight: 500;
+}
+
+#home #sideOptions button {
+  width: 200px;
+  height: 50px;
+  margin-top: 25px;
+  background-color: #d1d1d1;
+  font-size: 20px;
+}
+
+#home #sideOptions button:hover {
+  background-color: #bfbfbf;
+}
+
+#home #sideOptions button:active {
+  background-color: #5d5d5d;
 }
 
 #game {

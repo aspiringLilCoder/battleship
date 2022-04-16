@@ -3,13 +3,29 @@
     margin: 0;
 }
 
+$dark-primary-color: #4e4e4e;
+$light-primary-color: #f0f8ff;
+
+@mixin basicFlexStyles() {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
 body {
     font-family: 'Fredoka', sans-serif;
     height:100vh;
-    background: #f0f8ff;
-    color: #4e4e4e;
+    background: $light-primary-color;
+    color: $dark-primary-color;
     display:flex; 
     flex-direction:column; 
+}
+
+button {
+    border-radius: 25px;
+    font-family: 'Fredoka', sans-serif;
+    border: none;
+    cursor: pointer;
 }
 
 #title {
@@ -28,12 +44,46 @@ body {
         width: 500px;
         height: 500px;
         margin-right: 100px;
-        border: 1px solid black;
+        border: 1px solid $dark-primary-color;
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(10, 1fr);
         .square {
-            border: 1px solid black;
+            border: 1px solid $dark-primary-color;
+        }
+    }
+
+    #sideOptions {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        #instructionsDisplay {
+            color: $light-primary-color;
+            width: 250px;
+            height: 100px;
+            @include basicFlexStyles();
+            background-color: $dark-primary-color;
+            border-radius: 25px;
+            font-size: 25px;
+            padding: 5px;
+            font-weight: 500;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            margin-top: 25px;
+            background-color: #d1d1d1;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: #bfbfbf;
+        }
+
+        button:active {
+            background-color: #5d5d5d;
         }
     }
 }
@@ -46,18 +96,14 @@ body {
 footer {
     margin-top:auto;
     height: 20px; 
-    background-color: #4e4e4e;
+    background-color: $dark-primary-color;
     padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include basicFlexStyles();
     
     a {
-        color: #f0f8ff;
+        color: $light-primary-color;
         text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include basicFlexStyles();
     }
 
     a:hover {
