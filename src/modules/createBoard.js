@@ -1,4 +1,4 @@
-function createBoard(containerElement) {
+export default function createBoard(containerElement) {
     let letters = 'ABCDEFGHIJ';
     for (let i = 0; i < letters.length; i++) {
         for (let j = 0; j < 10; j++) {
@@ -9,3 +9,5 @@ function createBoard(containerElement) {
         }
     }
 }
+
+// createBoard(document.querySelector('#setShipsGameboard'));
