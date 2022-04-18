@@ -1,4 +1,4 @@
-let instructionsText_p = document.getElementById('instructionsText');
+const instructionsText_p = document.getElementById('instructionsText');
 
 export default function instructionDisplay(currentShip) {
     const shipOrder = ['Carrier', 'Battleship', 'Destroyer', 'Submarine', 'Patrol Boat'];
