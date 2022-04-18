@@ -12,5 +12,7 @@ export default function shipFactory(name, length) {
 
     const isSunk = (arr) => arr.every(el => el == true);
 
-    return {name, length, placesHit, hit, isSunk};
+    let shipPlacement = [];
+
+    return {name, length, placesHit, hit, isSunk, shipPlacement};
 }
