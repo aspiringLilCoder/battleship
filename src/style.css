@@ -91,6 +91,20 @@ button {
   font-weight: 500;
 }
 
+#home #sideOptions .start {
+  background-color: #ffdddd !important;
+  color: #000000 !important;
+}
+
+#home #sideOptions .start:hover {
+  background-color: #ffc2c2 !important;
+  cursor: pointer;
+}
+
+#home #sideOptions .start:active {
+  background-color: #ffaaaa !important;
+}
+
 #home #sideOptions .changingDisplay {
   display: inline-block;
   overflow: hidden;

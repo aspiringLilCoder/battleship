@@ -70,6 +70,20 @@ button {
             font-weight: 500;
         }
 
+        .start {
+            background-color: #ffdddd !important;
+            color: #000000 !important;
+        }
+
+        .start:hover {
+            background-color: #ffc2c2 !important;
+            cursor: pointer;
+        }
+
+        .start:active {
+            background-color: #ffaaaa !important;
+        }
+
         .changingDisplay {
             display: inline-block;
             overflow: hidden;
