@@ -86,9 +86,37 @@ button {
           justify-content: center;
   background-color: #4e4e4e;
   border-radius: 25px;
-  font-size: 25px;
+  font-size: 20px;
   padding: 5px;
   font-weight: 500;
+}
+
+#home #sideOptions .changingDisplay {
+  display: inline-block;
+  overflow: hidden;
+  -webkit-animation: typing 2s steps(25, end);
+          animation: typing 2s steps(25, end);
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 #home #sideOptions button {

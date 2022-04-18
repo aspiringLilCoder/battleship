@@ -65,9 +65,26 @@ button {
             @include basicFlexStyles();
             background-color: $dark-primary-color;
             border-radius: 25px;
-            font-size: 25px;
+            font-size: 20px;
             padding: 5px;
             font-weight: 500;
+        }
+
+        .changingDisplay {
+            display: inline-block;
+            overflow: hidden;
+            animation: typing 2s steps(25, end);
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        @keyframes typing {
+            from { 
+                width: 0% 
+            }
+            to { 
+                width: 100% 
+            }
         }
 
         button {
