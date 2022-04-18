@@ -19,7 +19,7 @@ let allShips = {
     battleship: battleship,
     destroyer: destroyer,
     submarine: submarine,
-    patrol_boat: patrol_boat
+    'patrol boat': patrol_boat
 }
 
 const Start = (function() {
@@ -28,7 +28,7 @@ const Start = (function() {
     axisChange();
     instructionDisplay();
     setShips.shipsHover(); 
-    // setShips.shipClick(); 
+    setShips.shipClick(); 
 })();
 
 

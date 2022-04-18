@@ -57,26 +57,33 @@ export let setShips = (function() {
         });
     }
 
-    let shipPlacement = {
 
-    }
+    let shipClick = function() {
+        const squares_div = document.querySelectorAll('#setShipsGameboard .square');
+        let currentShipObj = allShips[currentShip.toLowerCase()];
 
-    // let shipClick = function() {
-    //     const squares_div = document.querySelectorAll('#setShipsGameboard .square');
-        
-    //     squares_div.forEach(el => {
-    //         el.addEventListener('click', () => {
-    //             if (valid == false) {
+        squares_div.forEach(el => {
+            el.addEventListener('click', (e) => {
+                if (valid == false) {
 
-    //             } else {
-                    
-    //             }
-    //         })
-    //     });
-    // }
+                } else {
+                    let letter = e.target.classList[1][0];
+                    let num = parseInt(e.target.classList[1].slice(1, 3), 10);
+
+                    for (let i = 0; i < currentShipObj.length; i++) {
+                        if(axisVar == 'horizontal') {
+                            (currentShipObj.shipPlacement).push(`${letter}${num+i}`);
+                        } else {
+                            (currentShipObj.shipPlacement).push(`${letters[letters.indexOf(letter)+i]}${num}`);
+                        }
+                    }
+                }
+            })
+        })
+    };
 
     return {
         shipsHover,
-        // shipClick
+        shipClick
     }
 })();
