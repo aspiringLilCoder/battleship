@@ -1,14 +1,15 @@
-export default function axisChange(vari) {
+export let axisVar = 'horizontal';
+
+export  function axisChange() {
     let axis_button = document.getElementById('axis');
     axis_button.addEventListener('click', () => {
         console.log('clicked');
         if (axis_button.textContent == 'Horizontal') {
             axis_button.textContent = 'Vertical';
-            vari = 'vertical';
+            axisVar = 'vertical';
         } else {
             axis_button.textContent = 'Horizontal';
-            vari = 'horizontal';
+            axisVar = 'horizontal';
         }
-        console.log(vari);
     });
 }
