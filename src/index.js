@@ -1,9 +1,9 @@
 import './style.css';
 import githubLogo from './../img/github-logo.png';
 import shipFactory from "./modules/shipFactory";
-import createBoard from './modules/createBoard';
-import axisChange from './modules/axis';
-import setShips from './modules/setShips';
+import {createBoard, listOfSquareClasses} from './modules/createBoard';
+import {axisChange, axisVar} from './modules/axis';
+import { setShips } from './modules/setShips';
 import {instructionDisplay, currentShip }from './modules/instructionsDisplay';
 
 (document.getElementById('github-logo')).src = githubLogo;
@@ -22,16 +22,14 @@ let allShips = {
     patrol_boat: patrol_boat
 }
 
-let axisVar = 'horizontal';
-
-
 const Start = (function() {
     
     createBoard(document.querySelector('#setShipsGameboard'));
-    axisChange(axisVar);
+    axisChange();
     instructionDisplay();
-    setShips(); 
+    setShips.shipsHover(); 
+    // setShips.shipClick(); 
 })();
 
 
-export {axisVar, allShips};
+export {allShips};
