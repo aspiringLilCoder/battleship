@@ -87,8 +87,21 @@ export let setShips = (function() {
         })
     };
 
+    let shipReset = () => {
+        document.querySelector('#resetBoard').addEventListener('click', () => {
+            listOfSquareClasses.forEach(el => {
+                document.querySelector(`#setShipsGameboard .${el}`).style.backgroundColor = '#f0f8ff';
+                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('selected');
+                for (const prop in allShips) {
+                    allShips[prop].shipPlacement = [];
+                }
+            })
+        })
+    }
+
     return {
         shipsHover,
-        shipClick
+        shipClick,
+        shipReset
     }
 })();

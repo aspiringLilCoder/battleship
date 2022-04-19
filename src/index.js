@@ -29,6 +29,7 @@ const Start = (function() {
     instructionDisplay(currentShip);
     setShips.shipsHover(); 
     setShips.shipClick(); 
+    setShips.shipReset();
 })();
 
 
