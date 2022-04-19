@@ -1,3 +1,5 @@
+import { startGame } from "./startGame";
+
 const instructionsText_p = document.getElementById('instructionsText');
 const instructionsDisplay_div = document.getElementById('instructionsDisplay');
 
@@ -8,6 +10,7 @@ export function instructionDisplay(ship) {
         instructionsText_p.textContent = 'PRESS TO START';
         instructionsDisplay_div.classList.add('start');
         currentShip = 'finish';
+        startGame();
         return;
     }
     const shipOrder = ['start', 'Carrier', 'Battleship', 'Destroyer', 'Submarine', 'Patrol Boat'];
