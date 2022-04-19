@@ -1,7 +1,7 @@
 import {allShips} from "..";
 import { axisVar } from "./axis";
 import { listOfSquareClasses } from "./createBoard";
-import { currentShip } from "./instructionsDisplay";
+import { currentShip, instructionDisplay } from "./instructionsDisplay";
 
 const letters = 'ABCDEFGHIJ';
 
@@ -11,16 +11,17 @@ export let setShips = (function() {
     let shipsHover = () => {
         const squares_div = document.querySelectorAll('#setShipsGameboard .square');
 
-        let currentShipObj = allShips[currentShip.toLowerCase()];
-
         squares_div.forEach(el => {
             let resetColor = () => {
                 listOfSquareClasses.forEach(el => {
                     document.querySelector(`#setShipsGameboard .${el}`).style.backgroundColor = '#f0f8ff';
+
                 })
             };
 
             el.addEventListener('mouseover', (e) => {
+                let currentShipObj = allShips[currentShip.toLowerCase()];
+
                 resetColor();
 
                 let letter = e.target.classList[1][0];
@@ -60,10 +61,10 @@ export let setShips = (function() {
 
     let shipClick = function() {
         const squares_div = document.querySelectorAll('#setShipsGameboard .square');
-        let currentShipObj = allShips[currentShip.toLowerCase()];
 
         squares_div.forEach(el => {
             el.addEventListener('click', (e) => {
+                let currentShipObj = allShips[currentShip.toLowerCase()];
                 if (valid == false) {
 
                 } else {
@@ -73,11 +74,15 @@ export let setShips = (function() {
                     for (let i = 0; i < currentShipObj.length; i++) {
                         if(axisVar == 'horizontal') {
                             (currentShipObj.shipPlacement).push(`${letter}${num+i}`);
+                            document.querySelector(`#setShipsGameboard .${letter}${num+i}`).classList.add('selected');
                         } else {
                             (currentShipObj.shipPlacement).push(`${letters[letters.indexOf(letter)+i]}${num}`);
+                            document.querySelector(`#setShipsGameboard .${letters[letters.indexOf(letter)+i]}${num}`).classList.add('selected');
                         }
                     }
                 }
+                instructionDisplay(currentShip);
+                console.log(currentShip);
             })
         })
     };
