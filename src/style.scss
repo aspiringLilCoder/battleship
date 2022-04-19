@@ -51,6 +51,9 @@ button {
         .square {
             border: 1px solid $dark-primary-color;
         }
+        .selected {
+            background-color: #87efff !important;
+        }
     }
 
     #sideOptions {

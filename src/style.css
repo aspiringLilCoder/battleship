@@ -58,6 +58,10 @@ button {
   border: 1px solid #4e4e4e;
 }
 
+#home #setShipsGameboard .selected {
+  background-color: #87efff !important;
+}
+
 #home #sideOptions {
   display: -webkit-box;
   display: -ms-flexbox;
