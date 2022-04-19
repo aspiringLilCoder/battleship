@@ -26,7 +26,7 @@ const Start = (function() {
     
     createBoard(document.querySelector('#setShipsGameboard'));
     axisChange();
-    instructionDisplay();
+    instructionDisplay(currentShip);
     setShips.shipsHover(); 
     setShips.shipClick(); 
 })();
