@@ -71,18 +71,35 @@ export let setShips = (function() {
                     let letter = e.target.classList[1][0];
                     let num = parseInt(e.target.classList[1].slice(1, 3), 10);
 
+                    var alreadySelected = false;
+
                     for (let i = 0; i < currentShipObj.length; i++) {
-                        if(axisVar == 'horizontal') {
-                            (currentShipObj.shipPlacement).push(`${letter}${num+i}`);
-                            document.querySelector(`#setShipsGameboard .${letter}${num+i}`).classList.add('selected');
-                        } else {
-                            (currentShipObj.shipPlacement).push(`${letters[letters.indexOf(letter)+i]}${num}`);
-                            document.querySelector(`#setShipsGameboard .${letters[letters.indexOf(letter)+i]}${num}`).classList.add('selected');
+                        if (document.querySelector(`#setShipsGameboard .${letter}${num+i}`).classList.contains('selected') || document.querySelector(`#setShipsGameboard .${letters[letters.indexOf(letter)+i]}${num}`).classList.contains('selected')) {
+                            alreadySelected = true;
                         }
                     }
+
+                    for (let i = 0; i < currentShipObj.length; i++) {
+                        if (document.querySelector(`#setShipsGameboard .${letter}${num+i}`).classList.contains('selected') || document.querySelector(`#setShipsGameboard .${letters[letters.indexOf(letter)+i]}${num}`).classList.contains('selected')) {
+                            alreadySelected = true;
+                            console.log('true');
+                        } else if(alreadySelected == false) {
+                            if(axisVar == 'horizontal') {
+                                (currentShipObj.shipPlacement).push(`${letter}${num+i}`);
+                                 document.querySelector(`#setShipsGameboard .${letter}${num+i}`).classList.add('selected');
+                            } else {
+                                (currentShipObj.shipPlacement).push(`${letters[letters.indexOf(letter)+i]}${num}`);
+                                document.querySelector(`#setShipsGameboard .${letters[letters.indexOf(letter)+i]}${num}`).classList.add('selected');
+                            } 
+                            
+                        }
+                    }
+
+                    if (alreadySelected == false) {
+                        instructionDisplay(currentShip);
+                    }
+
                 }
-                instructionDisplay(currentShip);
-                console.log(currentShip);
             })
         })
     };
@@ -96,6 +113,7 @@ export let setShips = (function() {
                     allShips[prop].shipPlacement = [];
                 }
             })
+            instructionDisplay('start');
         })
     }
 
