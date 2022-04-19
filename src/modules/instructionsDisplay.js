@@ -7,6 +7,7 @@ export function instructionDisplay(ship) {
     if (ship == 'Patrol Boat') {
         instructionsText_p.textContent = 'PRESS TO START';
         instructionsDisplay_div.classList.add('start');
+        currentShip = 'finish';
         return;
     }
     const shipOrder = ['start', 'Carrier', 'Battleship', 'Destroyer', 'Submarine', 'Patrol Boat'];
