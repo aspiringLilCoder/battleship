@@ -94,7 +94,7 @@ export let setShips = (function() {
                             if(axisVar == 'horizontal') {
                                 (currentShipObj.shipPlacement).push(`${letter}${num+i}`);
                                 let selectedSquare = document.querySelector(`#setShipsGameboard .${letter}${num+i}`);
-                                 
+                                selectedSquare.classList.add('selected');
                                  currentShipObj.name == 'carrier' ? selectedSquare.classList.add('carrier')
                                                                 : (currentShipObj.name == 'battleship' ? selectedSquare.classList.add('battleship')
                                                                 : (currentShipObj.name == 'destroyer' ? selectedSquare.classList.add('destroyer')
@@ -104,6 +104,7 @@ export let setShips = (function() {
                             } else {
                                 (currentShipObj.shipPlacement).push(`${letters[letters.indexOf(letter)+i]}${num}`);
                                 let selectedSquare = document.querySelector(`#setShipsGameboard .${letters[letters.indexOf(letter)+i]}${num}`);
+                                selectedSquare.classList.add('selected');
                                 currentShipObj.name == 'carrier' ? selectedSquare.classList.add('carrier')
                                                                 : (currentShipObj.name == 'battleship' ? selectedSquare.classList.add('battleship')
                                                                 : (currentShipObj.name == 'destroyer' ? selectedSquare.classList.add('destroyer')
@@ -133,6 +134,7 @@ export let setShips = (function() {
                 document.querySelector(`#setShipsGameboard .${el}`).classList.remove('destroyer');
                 document.querySelector(`#setShipsGameboard .${el}`).classList.remove('submarine');
                 document.querySelector(`#setShipsGameboard .${el}`).classList.remove('patrol-boat');
+                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('selected');
                 for (const prop in allShips) {
                     allShips[prop].shipPlacement = [];
                 }
