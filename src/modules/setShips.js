@@ -65,7 +65,7 @@ export let setShips = (function() {
         squares_div.forEach(el => {
             el.addEventListener('click', (e) => {
                 let currentShipObj = allShips[currentShip.toLowerCase()];
-                if (valid == false) {
+                if (valid == false || currentShip == 'finish') {
 
                 } else {
                     console.log(e.target);
@@ -93,10 +93,23 @@ export let setShips = (function() {
                         if(valid == true) {
                             if(axisVar == 'horizontal') {
                                 (currentShipObj.shipPlacement).push(`${letter}${num+i}`);
-                                 document.querySelector(`#setShipsGameboard .${letter}${num+i}`).classList.add('selected');
-                                } else {
+                                let selectedSquare = document.querySelector(`#setShipsGameboard .${letter}${num+i}`);
+                                 
+                                 currentShipObj.name == 'carrier' ? selectedSquare.classList.add('carrier')
+                                                                : (currentShipObj.name == 'battleship' ? selectedSquare.classList.add('battleship')
+                                                                : (currentShipObj.name == 'destroyer' ? selectedSquare.classList.add('destroyer')
+                                                                : (currentShipObj.name == 'submarine' ? selectedSquare.classList.add('submarine')
+                                                                : (currentShipObj.name == 'patrol boat' ? selectedSquare.classList.add('patrol-boat')
+                                                                : false))))
+                            } else {
                                 (currentShipObj.shipPlacement).push(`${letters[letters.indexOf(letter)+i]}${num}`);
-                                document.querySelector(`#setShipsGameboard .${letters[letters.indexOf(letter)+i]}${num}`).classList.add('selected');
+                                let selectedSquare = document.querySelector(`#setShipsGameboard .${letters[letters.indexOf(letter)+i]}${num}`);
+                                currentShipObj.name == 'carrier' ? selectedSquare.classList.add('carrier')
+                                                                : (currentShipObj.name == 'battleship' ? selectedSquare.classList.add('battleship')
+                                                                : (currentShipObj.name == 'destroyer' ? selectedSquare.classList.add('destroyer')
+                                                                : (currentShipObj.name == 'submarine' ? selectedSquare.classList.add('submarine')
+                                                                : (currentShipObj.name == 'patrol boat' ? selectedSquare.classList.add('patrol-boat')
+                                                                : false))))
                             } 
                             
                         }
@@ -115,7 +128,11 @@ export let setShips = (function() {
         document.querySelector('#resetBoard').addEventListener('click', () => {
             listOfSquareClasses.forEach(el => {
                 document.querySelector(`#setShipsGameboard .${el}`).style.backgroundColor = '#f0f8ff';
-                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('selected');
+                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('carrier');
+                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('battleship');
+                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('destroyer');
+                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('submarine');
+                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('patrol-boat');
                 for (const prop in allShips) {
                     allShips[prop].shipPlacement = [];
                 }

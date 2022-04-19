@@ -58,8 +58,24 @@ button {
   border: 1px solid #4e4e4e;
 }
 
-#home #setShipsGameboard .selected {
-  background-color: #87efff !important;
+#home #setShipsGameboard .carrier {
+  background-color: #BFFFF0 !important;
+}
+
+#home #setShipsGameboard .battleship {
+  background-color: #F0FFC2 !important;
+}
+
+#home #setShipsGameboard .destroyer {
+  background-color: #FFE4C0 !important;
+}
+
+#home #setShipsGameboard .submarine {
+  background-color: #FFBBBB !important;
+}
+
+#home #setShipsGameboard .patrol-boat {
+  background-color: #e4ffd4 !important;
 }
 
 #home #sideOptions {
