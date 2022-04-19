@@ -171,6 +171,129 @@ button {
 
 #game {
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#game #turnDisplay {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 20px;
+  padding-top: 16px;
+  background-color: #cacaca;
+  border-radius: 25px;
+  width: 500px;
+  height: 70px;
+  text-align: center;
+}
+
+#game #gameBoards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+#game #gameBoards #left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#game #gameBoards #left #myBoard {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #4e4e4e;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  -ms-grid-rows: (1fr)[10];
+      grid-template-rows: repeat(10, 1fr);
+  margin-right: 40px;
+}
+
+#game #gameBoards #left #myBoard .square {
+  border: 1px solid #4e4e4e;
+}
+
+#game #gameBoards #left #myBoardTitle {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#game #gameBoards #right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#game #gameBoards #right #AIBoard {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #4e4e4e;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  margin-left: 40px;
+  -ms-grid-rows: (1fr)[10];
+      grid-template-rows: repeat(10, 1fr);
+}
+
+#game #gameBoards #right #AIBoard .square {
+  border: 1px solid #4e4e4e;
+}
+
+#game #gameBoards #right #AIBoardTitle {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#game #restartGame {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px;
+  background-color: #cacaca;
+  color: #4e4e4e;
+  border-radius: 25px;
+  width: 200px;
+  height: 70px;
+  text-align: center;
+}
+
+#game #restartGame:hover {
+  background-color: #bfbfbf;
+}
+
+#game #restartGame:active {
+  background-color: #5d5d5d;
 }
 
 footer {
