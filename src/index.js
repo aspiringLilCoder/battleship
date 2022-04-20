@@ -6,6 +6,7 @@ import {axisChange, axisVar} from './modules/axis';
 import { setShips } from './modules/setShips';
 import {instructionDisplay, currentShip }from './modules/instructionsDisplay';
 import { restartGame } from './modules/restartGame';
+import { placeAIShips } from './modules/placeAIships';
 
 (document.getElementById('github-logo')).src = githubLogo;
 
@@ -29,12 +30,12 @@ let allShips = {
     'patrol boat': patrol_boat
 }
 
-let allAIShips = {
+export let allAIShips = {
     AIcarrier: AIcarrier,
     AIbattleship: AIbattleship,
     AIdestroyer: AIdestroyer,
     AIsubmarine: AIsubmarine,
-    'ai patrol boat': AIpatrol_boat
+    'AI patrol boat': AIpatrol_boat
 }
 
 const Start = (function() {
@@ -46,6 +47,7 @@ const Start = (function() {
     setShips.shipsHover(); 
     setShips.shipClick(); 
     setShips.shipReset();
+    placeAIShips();
     restartGame();
 })();
 
