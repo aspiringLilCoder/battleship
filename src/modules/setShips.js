@@ -68,24 +68,13 @@ export let setShips = (function() {
                 if (valid == false || currentShip == 'finish') {
 
                 } else {
-                    console.log(e.target);
-                    console.log('valid is true');
-
                     let letter = e.target.classList[1][0];
                     let num = parseInt(e.target.classList[1].slice(1, 3), 10);
-                    console.log(letter, num);
                     for (let i = 0; i < currentShipObj.length; i++) {
-                        console.log(i);
                         if(axisVar == 'horizontal' && document.querySelector(`#setShipsGameboard .${letter}${num+i}`).classList.contains('selected')) {
-                            console.log('horizontal');
-                            console.log(`${letter}${num+i}`);
                             valid = false;
-                            console.log('valid is false');
                         } else if(axisVar == 'vertical' && document.querySelector(`#setShipsGameboard .${letters[letters.indexOf(letter)+i]}${num}`).classList.contains('selected')) {
-                            console.log('vertical');
-                            console.log(`${letters[letters.indexOf(letter)+i]}${num}`);
                             valid = false;
-                            console.log('valid is false');
                         } 
                     }
 
@@ -115,7 +104,6 @@ export let setShips = (function() {
                             
                         }
                     }
-                    console.log(currentShipObj.shipPlacement);
                     if (valid == true) {
                         instructionDisplay(currentShip);
                     }
