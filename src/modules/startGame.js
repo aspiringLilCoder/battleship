@@ -1,4 +1,5 @@
 import { createBoard } from "./createBoard";
+import { generateOwnShips } from "./generateOwnShips";
 
 export function startGame() {
     const startBtn = document.querySelector('.start');
@@ -7,7 +8,5 @@ export function startGame() {
     startBtn.addEventListener('click', () => {
         homeDiv.style.display = 'none';
         gameDiv.style.display = 'flex';
-        createBoard(document.querySelector('#myBoard'));
-        createBoard(document.querySelector('#AIBoard'));
     })
 }

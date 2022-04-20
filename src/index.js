@@ -24,6 +24,8 @@ let allShips = {
 
 const Start = (function() {
     createBoard(document.querySelector('#setShipsGameboard'));
+    createBoard(document.querySelector('#myBoard'));
+    createBoard(document.querySelector('#AIBoard'));
     axisChange();
     instructionDisplay(currentShip);
     setShips.shipsHover(); 
