@@ -1,5 +1,5 @@
 import { createBoard } from "./createBoard";
-import { generateOwnShips } from "./generateOwnShips";
+import { placeImg } from "./generateOwnShips";
 
 export function startGame() {
     const startBtn = document.querySelector('.start');
@@ -8,5 +8,10 @@ export function startGame() {
     startBtn.addEventListener('click', () => {
         homeDiv.style.display = 'none';
         gameDiv.style.display = 'flex';
+        placeImg('carrier');
+        placeImg('battleship');
+        placeImg('destroyer');
+        placeImg('submarine');
+        placeImg('patrol boat');
     })
 }

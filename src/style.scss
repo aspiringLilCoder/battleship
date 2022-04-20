@@ -168,6 +168,18 @@ button {
                 margin-right: 40px;
                 .square {
                     border: 1px solid $dark-primary-color;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        z-index: 1;
+                    }
+                }
+                .vertical {
+                    transform: rotate(90deg);
+                    z-index: 1;
+                }
+                .selected {
+                    background-color: #c1c1c1 !important;
                 }
             }
             #myBoardTitle {

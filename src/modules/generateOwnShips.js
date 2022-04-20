@@ -12,26 +12,26 @@ export function placeImg(ship) {
     ship == 'destroyer' ? img = destroyerImg:false;
     ship == 'patrol boat' ? img = patrolboatImg:false;
     ship == 'submarine' ? img = submarineImg:false;
-    function makeImg() {
-        let imgEl = document.createElement('img');
-        imgEl.src = img;
-        if (ship == 'patrol boat') {
-            imgEl.classList.add('patrol');
-        }
-        allShips[ship].axis == 'vertical' ? imgEl.classList.add("vertical"): false;
-        return imgEl;
+
+    let imgEl = document.createElement('img');
+    imgEl.src = img;
+    if (ship == 'patrol boat') {
+        imgEl.classList.add('patrol');
     }
     
     let squareName = allShips[ship].shipPlacement[0];
-    let setSquare = document.querySelector(`#setShipsGameboard .${squareName}`);
     let mySquare = document.querySelector(`#myBoard .${squareName}`);
-
+    const letters = 'ABCDEFGHIJ';
     let num = parseInt(squareName.slice(1, 3), 10);
+    let letter = squareName[0];
+    allShips[ship].axis == 'vertical' ? document.querySelector(`#myBoard .${letter}${num}`).classList.add("vertical"): false;
     
     for (let i = 0; i < allShips[ship].length; i++) {
-        document.querySelector(`#myBoard .${squareName[0]}${num+i}`).classList.add('selected');
+        if(allShips[ship].axis == 'horizontal') {
+            document.querySelector(`#myBoard .${letter}${num+i}`).classList.add('selected');
+        } else {
+            document.querySelector(`#myBoard .${letters[letters.indexOf(letter)+i]}${num}`).classList.add('selected');
+        } 
     }
-
-    setSquare.appendChild(makeImg());
-    mySquare.appendChild(makeImg());
+    mySquare.appendChild(imgEl);
 }

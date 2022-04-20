@@ -234,6 +234,22 @@ button {
 
 #game #gameBoards #left #myBoard .square {
   border: 1px solid #4e4e4e;
+  position: relative;
+}
+
+#game #gameBoards #left #myBoard .square img {
+  position: absolute;
+  z-index: 1;
+}
+
+#game #gameBoards #left #myBoard .vertical {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  z-index: 1;
+}
+
+#game #gameBoards #left #myBoard .selected {
+  background-color: #c1c1c1 !important;
 }
 
 #game #gameBoards #left #myBoardTitle {
