@@ -15,12 +15,26 @@ let destroyer = shipFactory('destroyer', 3);
 let submarine = shipFactory('submarine', 3);
 let patrol_boat = shipFactory('patrol boat', 2);
 
+let AIcarrier = shipFactory('carrier', 5);
+let AIbattleship = shipFactory('battleship', 4);
+let AIdestroyer = shipFactory('destroyer', 3);
+let AIsubmarine = shipFactory('submarine', 3);
+let AIpatrol_boat = shipFactory('patrol boat', 2);
+
 let allShips = {
     carrier: carrier,
     battleship: battleship,
     destroyer: destroyer,
     submarine: submarine,
     'patrol boat': patrol_boat
+}
+
+let allAIShips = {
+    AIcarrier: AIcarrier,
+    AIbattleship: AIbattleship,
+    AIdestroyer: AIdestroyer,
+    AIsubmarine: AIsubmarine,
+    'ai patrol boat': AIpatrol_boat
 }
 
 const Start = (function() {
