@@ -5,6 +5,7 @@ import {createBoard, listOfSquareClasses} from './modules/createBoard';
 import {axisChange, axisVar} from './modules/axis';
 import { setShips } from './modules/setShips';
 import {instructionDisplay, currentShip }from './modules/instructionsDisplay';
+import { restartGame } from './modules/restartGame';
 
 (document.getElementById('github-logo')).src = githubLogo;
 
@@ -31,6 +32,7 @@ const Start = (function() {
     setShips.shipsHover(); 
     setShips.shipClick(); 
     setShips.shipReset();
+    restartGame();
 })();
 
 
