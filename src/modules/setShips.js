@@ -82,6 +82,7 @@ export let setShips = (function() {
                         if(valid == true) {
                             if(axisVar == 'horizontal') {
                                 (currentShipObj.shipPlacement).push(`${letter}${num+i}`);
+                                currentShipObj.axis = axisVar;
                                 let selectedSquare = document.querySelector(`#setShipsGameboard .${letter}${num+i}`);
                                 selectedSquare.classList.add('selected');
                                  currentShipObj.name == 'carrier' ? selectedSquare.classList.add('carrier')
@@ -91,6 +92,7 @@ export let setShips = (function() {
                                                                 : (currentShipObj.name == 'patrol boat' ? selectedSquare.classList.add('patrol-boat')
                                                                 : false))))
                             } else {
+                                currentShipObj.axis = axisVar;
                                 (currentShipObj.shipPlacement).push(`${letters[letters.indexOf(letter)+i]}${num}`);
                                 let selectedSquare = document.querySelector(`#setShipsGameboard .${letters[letters.indexOf(letter)+i]}${num}`);
                                 selectedSquare.classList.add('selected');

@@ -14,5 +14,7 @@ export default function shipFactory(name, length) {
 
     let shipPlacement = [];
 
-    return {name, length, placesHit, hit, isSunk, shipPlacement};
+    let axis = '';
+
+    return {name, length, placesHit, hit, isSunk, shipPlacement, axis};
 }
