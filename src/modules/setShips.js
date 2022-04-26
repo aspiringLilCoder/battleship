@@ -65,8 +65,6 @@ export let setShips = (function() {
         squares_div.forEach(el => {
             el.addEventListener('click', (e) => {
                 let audio = document.querySelector("#splashAudio");
-                audio.currentTime= 0;
-                audio.play();
 
                 let currentShipObj = allShips[currentShip.toLowerCase()];
                 if (valid == false || currentShip == 'finish') {
@@ -112,6 +110,8 @@ export let setShips = (function() {
                     }
                     if (valid == true) {
                         instructionDisplay(currentShip);
+                        audio.currentTime= 0;
+                        audio.play();
                     }
 
                 }
