@@ -75,7 +75,6 @@ export function placeAIShips() {
                                                         : (currentShipObj.name == 'submarine' ? selectedSquare.classList.add('submarine')
                                                         : (currentShipObj.name == 'patrol boat' ? selectedSquare.classList.add('patrol-boat')
                                                         : false))))
-                        console.log(selectedSquare);
                         
                     } else {
                         currentShipObj.axis = axisVar;
@@ -88,7 +87,6 @@ export function placeAIShips() {
                                                         : (currentShipObj.name == 'submarine' ? selectedSquare.classList.add('submarine')
                                                         : (currentShipObj.name == 'patrol boat' ? selectedSquare.classList.add('patrol-boat')
                                                         : false))))
-                        console.log(selectedSquare);
                     } 
                     
                 }
