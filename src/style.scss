@@ -203,6 +203,12 @@ button {
                 .square {
                     border: 1px solid $dark-primary-color;
                 }
+                .square:hover {
+                    background-image: url('../img/bomb.png');
+                }
+                .square:active {
+                    background-color: red;
+                }
             }
             #AIBoardTitle {
                 font-size: 20px;

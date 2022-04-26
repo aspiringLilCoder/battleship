@@ -287,6 +287,14 @@ button {
   border: 1px solid #4e4e4e;
 }
 
+#game #gameBoards #right #AIBoard .square:hover {
+  background-image: url("../img/bomb.png");
+}
+
+#game #gameBoards #right #AIBoard .square:active {
+  background-color: red;
+}
+
 #game #gameBoards #right #AIBoardTitle {
   font-size: 20px;
   font-weight: 500;
