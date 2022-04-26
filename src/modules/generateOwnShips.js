@@ -28,9 +28,23 @@ export function placeImg(ship) {
     
     for (let i = 0; i < allShips[ship].length; i++) {
         if(allShips[ship].axis == 'horizontal') {
-            document.querySelector(`#myBoard .${letter}${num+i}`).classList.add('selected');
+            let selectedSquare = document.querySelector(`#myBoard .${letter}${num+i}`);
+            selectedSquare.classList.add('selected');
+            allShips[ship].name == 'carrier' ? selectedSquare.classList.add('carrier')
+                                                        : (allShips[ship].name == 'battleship' ? selectedSquare.classList.add('battleship')
+                                                        : (allShips[ship].name == 'destroyer' ? selectedSquare.classList.add('destroyer')
+                                                        : (allShips[ship].name == 'submarine' ? selectedSquare.classList.add('submarine')
+                                                        : (allShips[ship].name == 'patrol boat' ? selectedSquare.classList.add('patrol-boat')
+                                                        : false))))
         } else {
-            document.querySelector(`#myBoard .${letters[letters.indexOf(letter)+i]}${num}`).classList.add('selected');
+            let selectedSquare = document.querySelector(`#myBoard .${letters[letters.indexOf(letter)+i]}${num}`);
+            selectedSquare.classList.add('selected');
+            allShips[ship].name == 'carrier' ? selectedSquare.classList.add('carrier')
+                                                        : (allShips[ship].name == 'battleship' ? selectedSquare.classList.add('battleship')
+                                                        : (allShips[ship].name == 'destroyer' ? selectedSquare.classList.add('destroyer')
+                                                        : (allShips[ship].name == 'submarine' ? selectedSquare.classList.add('submarine')
+                                                        : (allShips[ship].name == 'patrol boat' ? selectedSquare.classList.add('patrol-boat')
+                                                        : false))))
         } 
     }
     mySquare.appendChild(imgEl);

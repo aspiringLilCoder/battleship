@@ -48,9 +48,7 @@ const Start = (function() {
     setShips.shipsHover(); 
     setShips.shipClick(); 
     setShips.shipResetListener();
-    placeAIShips();
     restartGame();
-    Attack.playerHover();
 })();
 
 
