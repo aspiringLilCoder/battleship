@@ -306,7 +306,7 @@ button {
   border: 1px solid #4e4e4e;
 }
 
-#game #gameBoards #right #AIBoard .square:hover {
+#game #gameBoards #right #AIBoard .hovered:hover {
   background-image: url("../img/bomb.png");
 }
 

@@ -15,25 +15,14 @@ export const Attack = (function () {
             turnText_p.textContent = "It's your turn to attack!";
         }
     }
-    // const allAISquares = document.querySelectorAll('#AIBoard .square');
 
-    // const playerHover = () => {
-    //     const resetHover = () => {
-    //         listOfSquareClasses.forEach(el => {
-    //             document.querySelector(`#AIBoard .${el}`).classList.remove('hovered');
-    //         })
-    //     }
+    const playerHover = () => {
+        const allAISquares = document.querySelectorAll('#AIBoard .square');
 
-    //     allAISquares.forEach(el => {
-    //         el.addEventListener('mouseover', e => {
-    //             resetHover();
-    //             el.classList.add('hovered');
-    //         })
-    //         el.addEventListener('mouseout', e => {
-    //             resetHover();
-    //         })
-    //     })
-    // }
+        allAISquares.forEach(el => {
+            el.classList.add('hovered');
+        })
+    }
 
     // const playerAttack = () => {
     //     allAISquares.forEach(el => {
@@ -51,5 +40,5 @@ export const Attack = (function () {
     // }
 
 
-    return { };
+    return { playerHover };
 })();

@@ -50,6 +50,7 @@ const Start = (function() {
     setShips.shipReset();
     placeAIShips();
     restartGame();
+    Attack.playerHover();
 })();
 
 
