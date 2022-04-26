@@ -190,6 +190,10 @@ button {
                         position: absolute;
                         z-index: 1;
                     }
+                    .exploded {
+                        position: absolute;
+                        z-index: 2;
+                    }
                 }
                 .vertical {
                     transform: rotate(90deg);

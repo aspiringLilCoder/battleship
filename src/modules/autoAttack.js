@@ -21,6 +21,12 @@ export function autoAttack() {
             valid = false;
         } else if(element.classList.contains('selected')) {
             // element.style.backgroundColor = 'pink !important';
+            let explosionImg = document.createElement('img');
+            explosionImg.src = explodeImg;
+            explosionImg.classList.add('exploded');
+            element.appendChild(explosionImg);
+            
+
             element.classList.add('hit');
             element.classList.add('selectedHit');
 

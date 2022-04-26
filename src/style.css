@@ -261,6 +261,11 @@ button {
   z-index: 1;
 }
 
+#game #gameBoards #left #myBoard .square .exploded {
+  position: absolute;
+  z-index: 2;
+}
+
 #game #gameBoards #left #myBoard .vertical {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
