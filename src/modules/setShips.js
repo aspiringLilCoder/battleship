@@ -120,19 +120,23 @@ export let setShips = (function() {
     };
 
     let shipReset = () => {
+        listOfSquareClasses.forEach(el => {
+            document.querySelector(`#setShipsGameboard .${el}`).style.backgroundColor = '#f0f8ff';
+            document.querySelector(`#setShipsGameboard .${el}`).classList.remove('carrier');
+            document.querySelector(`#setShipsGameboard .${el}`).classList.remove('battleship');
+            document.querySelector(`#setShipsGameboard .${el}`).classList.remove('destroyer');
+            document.querySelector(`#setShipsGameboard .${el}`).classList.remove('submarine');
+            document.querySelector(`#setShipsGameboard .${el}`).classList.remove('patrol-boat');
+            document.querySelector(`#setShipsGameboard .${el}`).classList.remove('selected');
+            for (const prop in allShips) {
+                allShips[prop].shipPlacement = [];
+            }
+        })
+    }
+
+    let shipResetListener = () => {
         document.querySelector('#resetBoard').addEventListener('click', () => {
-            listOfSquareClasses.forEach(el => {
-                document.querySelector(`#setShipsGameboard .${el}`).style.backgroundColor = '#f0f8ff';
-                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('carrier');
-                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('battleship');
-                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('destroyer');
-                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('submarine');
-                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('patrol-boat');
-                document.querySelector(`#setShipsGameboard .${el}`).classList.remove('selected');
-                for (const prop in allShips) {
-                    allShips[prop].shipPlacement = [];
-                }
-            })
+            shipReset();
             instructionDisplay('start');
         })
     }
@@ -140,6 +144,7 @@ export let setShips = (function() {
     return {
         shipsHover,
         shipClick,
-        shipReset
+        shipReset,
+        shipResetListener
     }
 })();
