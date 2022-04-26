@@ -219,8 +219,8 @@ button {
                 .square {
                     border: 1px solid $dark-primary-color;
                 }
-                .hovered:hover {
-                    background-image: url('../img/bomb.png');
+                .square:hover {
+                    background: rgb(173, 235, 255);
                 }
             }
             #AIBoardTitle {
