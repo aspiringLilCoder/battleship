@@ -4,4 +4,8 @@ export function restartGame() {
         location.reload();
         return false;
     });
+    document.querySelector('#restartGame2').addEventListener('click', () => {
+        location.reload();
+        return false;
+    });
 }
