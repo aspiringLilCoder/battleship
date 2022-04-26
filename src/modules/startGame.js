@@ -1,4 +1,4 @@
-import { Attack } from "./attack";
+// import { Attack } from "./attack";
 import { placeImg } from "./generateOwnShips";
 import { placeAIShips } from "./placeAIships";
 

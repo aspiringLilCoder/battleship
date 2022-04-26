@@ -7,7 +7,6 @@ import { setShips } from './modules/setShips';
 import {instructionDisplay, currentShip }from './modules/instructionsDisplay';
 import { restartGame } from './modules/restartGame';
 import { placeAIShips } from './modules/placeAIships';
-import { Attack } from './modules/attack';
 
 (document.getElementById('github-logo')).src = githubLogo;
 
