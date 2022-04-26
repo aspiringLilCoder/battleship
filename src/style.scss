@@ -151,13 +151,14 @@ button {
         text-align: center;
     }
 
-    #turnText {
+    .changingDisplay {
         display: inline-block;
         overflow: hidden;
         animation: typing 2s steps(25, end);
         white-space: nowrap;
         box-sizing: border-box;
     }
+
     @keyframes typing {
         from { 
             width: 0% 
@@ -196,6 +197,12 @@ button {
                 }
                 .selected {
                     background-color: #c1c1c1 !important;
+                }
+                .selectedHit {
+                    background-color: pink !important;
+                }
+                .sunk {
+                    background-color: red !important;
                 }
             }
             #myBoardTitle {

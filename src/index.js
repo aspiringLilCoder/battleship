@@ -48,6 +48,7 @@ const Start = (function() {
     setShips.shipClick(); 
     setShips.shipResetListener();
     restartGame();
+    placeAIShips();
 })();
 
 

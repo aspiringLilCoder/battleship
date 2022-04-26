@@ -1,5 +1,6 @@
 // import { Attack } from "./attack";
 import { placeImg } from "./generateOwnShips";
+import { myAttack } from "./myAttack";
 import { placeAIShips } from "./placeAIships";
 
 export function startGame() {
@@ -14,8 +15,6 @@ export function startGame() {
         placeImg('destroyer');
         placeImg('submarine');
         placeImg('patrol boat');
-        placeAIShips();
-        // Attack.playerHover();
-        // Attack.playerAttack();
+        myAttack();
     })
 }

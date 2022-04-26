@@ -192,7 +192,7 @@ button {
   text-align: center;
 }
 
-#game #turnText {
+#game .changingDisplay {
   display: inline-block;
   overflow: hidden;
   -webkit-animation: typing 2s steps(25, end);
@@ -269,6 +269,14 @@ button {
 
 #game #gameBoards #left #myBoard .selected {
   background-color: #c1c1c1 !important;
+}
+
+#game #gameBoards #left #myBoard .selectedHit {
+  background-color: pink !important;
+}
+
+#game #gameBoards #left #myBoard .sunk {
+  background-color: red !important;
 }
 
 #game #gameBoards #left #myBoardTitle {
