@@ -103,9 +103,4 @@ export function placeAIShips() {
     }
 
     setAIShips();
-
-
-
-       
-
 }
