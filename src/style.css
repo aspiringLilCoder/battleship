@@ -192,6 +192,25 @@ button {
   text-align: center;
 }
 
+#game #turnText {
+  display: inline-block;
+  overflow: hidden;
+  -webkit-animation: typing 2s steps(25, end);
+          animation: typing 2s steps(25, end);
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 #game #gameBoards {
   display: -webkit-box;
   display: -ms-flexbox;
